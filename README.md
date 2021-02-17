@@ -40,4 +40,14 @@ A fully functional MVVM News Application written in Kotlin.
 * Don't be over engineered to use observable pattern, when no need to use it.
 * Parent coroutine can automatically manage the life cycle of its child coroutines for you.
 
+# Keep your code clean according to MVVM
+
+* Yes , liveData is easy , powerful , but you should know how to use.
+* For livedate which will emit data stream , it has to be in your data layer , and don't inform those observables any thing else like in which thread those will consume , cause it is another
+* For livedata which will emit UI binding events, it has to be in your ViewModel Layer.
+* Observers in UI Consume and react to live data values and bind it. responsibility , and according to Single responsibility principle in SOLID (object-oriented design) , so don't break this concept by mixing the responsibilities.
+
+![alt text](https://developer.android.com/topic/libraries/architecture/images/final-architecture.png)
+
+
 
