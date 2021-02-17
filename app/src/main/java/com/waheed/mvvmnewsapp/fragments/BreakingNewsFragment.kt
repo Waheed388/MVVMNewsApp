@@ -48,7 +48,6 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
                         isLastPage = viewModel.breakingNewsPage == totalPages
                         if (isLastPage)
                             rvBreakingNews.setPadding(0, 0, 0, 0)//Remove padding dynamically
-
                     }
                 }
                 is Resource.Error -> {
